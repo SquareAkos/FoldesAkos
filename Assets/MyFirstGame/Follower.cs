@@ -8,12 +8,15 @@ public class Follower : MonoBehaviour
     {
         Vector3 selfPosition = transform.position;
         Vector3 targetPosiion = targetTrasnform.position;
+
+        transform.position = Vector3.MoveTowards(selfPosition,targetPosiion,speed * Time.deltaTime);
+
+
         Vector3 directionvector = targetPosiion - selfPosition;
         directionvector.Normalize();
 
-        Vector3 velocityVector = directionvector * speed;
-
-        transform.position += velocityVector * Time.deltaTime;
+        //Vector3 velocityVector = directionvector * speed;
+        //transform.position += velocityVector * Time.deltaTime;
 
         
 

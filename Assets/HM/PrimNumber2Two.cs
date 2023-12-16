@@ -1,4 +1,4 @@
-using UnityEngine;
+ using UnityEngine;
 
 public class PrimNumber2Two : MonoBehaviour
 {

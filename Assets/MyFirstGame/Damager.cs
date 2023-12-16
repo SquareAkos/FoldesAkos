@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Damager : MonoBehaviour
 {
-    [SerializeField] float damage = 10;
+    [SerializeField] float damage = 50f;
     void OnTriggerEnter(Collider other)
     {
         Damageable damageable = other.GetComponent<Damageable>();
@@ -10,7 +10,7 @@ public class Damager : MonoBehaviour
         
         if (damageable != null)
         {
-            damageable.AddDamage(1);
+            damageable.AddDamage(damage);
             Debug.Log("Damage: " + other.name);
             
         }

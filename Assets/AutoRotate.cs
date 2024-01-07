@@ -7,7 +7,7 @@ class AutoRotate : MonoBehaviour
     void Update()
     {
         float rotateInAngle = angularSpeed * Time.deltaTime;
-        transform.Rotate(0, rotateInAngle, 0);
+        transform.Rotate(0, rotateInAngle, 0, Space.World);
 
         /*
         Quaternion rotation = transform.rotation;

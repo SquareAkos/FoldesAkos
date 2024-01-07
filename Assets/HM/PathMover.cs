@@ -4,7 +4,13 @@ class PathMover : MonoBehaviour
 {
     [SerializeField] Transform t1, t2;
     [SerializeField] float speed;
+    [SerializeField, Range(0, 1)] float startPoint;
     Transform currentTarget;
+
+    void OnValidate()
+    {
+        transform.position = Vector3.Lerp(t1.position, t2.position, startPoint);
+    }
     void Start()
     {
         transform.position = t1.position;

@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ArrayPractice : MonoBehaviour
@@ -47,8 +48,28 @@ public class ArrayPractice : MonoBehaviour
             array4[i] = (i + 1 )* 3;
         }
 
+        //void Start()
+        //{
 
-        
+        //    Reverse(array1);
+
+        //}
+
+
+        void Reverse(int[] numbers)
+
+        {
+
+            for (int i = 0; i < numbers.Length / 2; i++)
+            {
+                int a = numbers[i];
+                int b = numbers[^(1 + i)];
+
+                numbers[i] = b;
+                numbers[^(i + 1)] = a;
+            }
+
+        }
 
 
 
